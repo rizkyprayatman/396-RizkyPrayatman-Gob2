@@ -49,7 +49,7 @@ func CreatePhoto(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{
+	c.JSON(http.StatusCreated, gin.H{
 		"id":         Photo.ID,
 		"title":      Photo.Title,
 		"caption":    Photo.Caption,

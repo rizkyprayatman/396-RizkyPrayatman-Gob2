@@ -33,7 +33,7 @@ func DbInit() *gorm.DB {
 		log.Fatal("Failed connect to database")
 	}
 
-	db.AutoMigrate(models.User{}, models.Photo{})
+	db.AutoMigrate(models.User{}, models.Photo{}, models.Comment{}, models.SocialMedia{})
 
 	if err != nil {
 		errorMessage := fmt.Sprintf("Failed to migrate models: %s", err.Error())
